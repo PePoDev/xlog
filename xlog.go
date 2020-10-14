@@ -11,10 +11,6 @@ import (
 
 var logFormat *logrus.TextFormatter
 
-func init() {
-	DefaultLogFormatter()
-}
-
 // DefaultLogFormatter set Formatter with TextFormatter that log like.
 // You can use logrus package to set it with yourself
 func DefaultLogFormatter() {
