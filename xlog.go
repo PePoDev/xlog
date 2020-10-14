@@ -9,10 +9,6 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-func init() {
-	DefaultLogFormatter()
-}
-
 var logFormat *logrus.TextFormatter
 
 // DefaultLogFormatter set Formatter with TextFormatter that log like.
@@ -54,6 +50,12 @@ func SetFormatter(format logrus.Formatter) {
 // SetLevel will set logrus level
 func SetLevel(level logrus.Level) {
 	logrus.SetLevel(level)
+
+}
+
+// GetLevel returns the standard logger level.
+func GetLevel() logrus.Level {
+	return logrus.GetLevel()
 }
 
 // Log struct contain logrus fields
