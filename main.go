@@ -83,15 +83,15 @@ func (log Log) SetField(fieldName string, value interface{}) *Log {
 }
 
 // Tracef will log in Trace level with format
-func (log Log) Tracef(format string, a ...interface{}) {
+func (log Log) Tracef(format string, args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Tracef(format, a...)
+	logrus.WithFields(log.fields).Tracef(format, args...)
 }
 
 // Traceln will log in Trace level with format
-func (log Log) Traceln(format string, a ...interface{}) {
+func (log Log) Traceln(args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Traceln(format, a...)
+	logrus.WithFields(log.fields).Traceln(args...)
 }
 
 // Trace will log in Trace level
@@ -101,15 +101,15 @@ func (log Log) Trace(message string) {
 }
 
 // Debugf will log in Debug level with format
-func (log Log) Debugf(format string, a ...interface{}) {
+func (log Log) Debugf(format string, args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Debugf(format, a...)
+	logrus.WithFields(log.fields).Debugf(format, args...)
 }
 
 // Debugln will log in Debug level with format
-func (log Log) Debugln(format string, a ...interface{}) {
+func (log Log) Debugln(args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Debugln(format, a...)
+	logrus.WithFields(log.fields).Debugln(args...)
 }
 
 // Debug will log in Debug level
@@ -119,15 +119,15 @@ func (log Log) Debug(message string) {
 }
 
 // Infof will log in info level with format
-func (log Log) Infof(format string, a ...interface{}) {
+func (log Log) Infof(format string, args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Infof(format, a...)
+	logrus.WithFields(log.fields).Infof(format, args...)
 }
 
 // Infoln will log in info level with format
-func (log Log) Infoln(format string, a ...interface{}) {
+func (log Log) Infoln(args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Infoln(format, a...)
+	logrus.WithFields(log.fields).Infoln(args...)
 }
 
 // Info will log in info level
@@ -137,15 +137,15 @@ func (log Log) Info(message string) {
 }
 
 // Warnf will log in Warning level with format
-func (log Log) Warnf(format string, a ...interface{}) {
+func (log Log) Warnf(format string, args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Warnf(format, a...)
+	logrus.WithFields(log.fields).Warnf(format, args...)
 }
 
 // Warnln will log in Warning level with format
-func (log Log) Warnln(format string, a ...interface{}) {
+func (log Log) Warnln(args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Warnln(format, a...)
+	logrus.WithFields(log.fields).Warnln(args...)
 }
 
 // Warn will log in Warning level
@@ -155,15 +155,15 @@ func (log Log) Warn(message string) {
 }
 
 // Errorf will log in Error level with format
-func (log Log) Errorf(format string, a ...interface{}) {
+func (log Log) Errorf(format string, args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Errorf(format, a...)
+	logrus.WithFields(log.fields).Errorf(format, args...)
 }
 
 // Errorln will log in Error level with format
-func (log Log) Errorln(format string, a ...interface{}) {
+func (log Log) Errorln(args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Errorln(format, a...)
+	logrus.WithFields(log.fields).Errorln(args...)
 }
 
 // Error will log in Error level
@@ -173,15 +173,15 @@ func (log Log) Error(message string) {
 }
 
 // Fatalf will log in Fail level with format and call exit program
-func (log Log) Fatalf(format string, a ...interface{}) {
+func (log Log) Fatalf(format string, args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Fatalf(format, a...)
+	logrus.WithFields(log.fields).Fatalf(format, args...)
 }
 
 // Fatalln will log in Fail level with format and call exit program
-func (log Log) Fatalln(format string, a ...interface{}) {
+func (log Log) Fatalln(args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Fatalln(format, a...)
+	logrus.WithFields(log.fields).Fatalln(args...)
 }
 
 // Fatal will log in Fail level and call exit program
@@ -191,15 +191,15 @@ func (log Log) Fatal(message string) {
 }
 
 // Panicf will log in panic level with format and call panic
-func (log Log) Panicf(message string, a ...interface{}) {
+func (log Log) Panicf(message string, args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Panicf(message, a...)
+	logrus.WithFields(log.fields).Panicf(message, args...)
 }
 
 // Panicln will log in panic level with format and call panic
-func (log Log) Panicln(message string, a ...interface{}) {
+func (log Log) Panicln(args ...interface{}) {
 	log.attachTrace()
-	logrus.WithFields(log.fields).Panicln(message, a...)
+	logrus.WithFields(log.fields).Panicln(args...)
 }
 
 // Panic will log in panic level and call panic
@@ -209,13 +209,13 @@ func (log Log) Panic(message string) {
 }
 
 // Tracef will log in Trace level with format
-func Tracef(format string, a ...interface{}) {
-	logrus.Tracef(format, a...)
+func Tracef(format string, args ...interface{}) {
+	logrus.Tracef(format, args...)
 }
 
 // Traceln will log in Trace level with format
-func Traceln(format string, a ...interface{}) {
-	logrus.Traceln(format, a...)
+func Traceln(args ...interface{}) {
+	logrus.Traceln(args...)
 }
 
 // Trace will log in Trace level
@@ -224,13 +224,13 @@ func Trace(message string) {
 }
 
 // Debugf will log in Debug level with format
-func Debugf(format string, a ...interface{}) {
-	logrus.Debugf(format, a...)
+func Debugf(format string, args ...interface{}) {
+	logrus.Debugf(format, args...)
 }
 
 // Debugln will log in Debug level with format
-func Debugln(format string, a ...interface{}) {
-	logrus.Debugln(format, a...)
+func Debugln(args ...interface{}) {
+	logrus.Debugln(args...)
 }
 
 // Debug will log in Debug level
@@ -239,13 +239,13 @@ func Debug(message string) {
 }
 
 // Infof will log in info level with format
-func Infof(format string, a ...interface{}) {
-	logrus.Infof(format, a...)
+func Infof(format string, args ...interface{}) {
+	logrus.Infof(format, args...)
 }
 
 // Infoln will log in info level with format
-func Infoln(format string, a ...interface{}) {
-	logrus.Infoln(format, a...)
+func Infoln(args ...interface{}) {
+	logrus.Infoln(args...)
 }
 
 // Info will log in info level
@@ -254,13 +254,13 @@ func Info(message string) {
 }
 
 // Warnf will log in Warning level with format
-func Warnf(format string, a ...interface{}) {
-	logrus.Warnf(format, a...)
+func Warnf(format string, args ...interface{}) {
+	logrus.Warnf(format, args...)
 }
 
 // Warnln will log in Warning level with format
-func Warnln(format string, a ...interface{}) {
-	logrus.Warnln(format, a...)
+func Warnln(args ...interface{}) {
+	logrus.Warnln(args...)
 }
 
 // Warn will log in Warning level
@@ -269,13 +269,13 @@ func Warn(message string) {
 }
 
 // Errorf will log in Error level with format
-func Errorf(format string, a ...interface{}) {
-	logrus.Errorf(format, a...)
+func Errorf(format string, args ...interface{}) {
+	logrus.Errorf(format, args...)
 }
 
 // Errorln will log in Error level with format
-func Errorln(format string, a ...interface{}) {
-	logrus.Errorln(format, a...)
+func Errorln(args ...interface{}) {
+	logrus.Errorln(args...)
 }
 
 // Error will log in Error level
@@ -284,13 +284,13 @@ func Error(message string) {
 }
 
 // Fatalf will log in Fail level with format and call exit program
-func Fatalf(format string, a ...interface{}) {
-	logrus.Fatalf(format, a...)
+func Fatalf(format string, args ...interface{}) {
+	logrus.Fatalf(format, args...)
 }
 
 // Fatalln will log in Fail level with format and call exit program
-func Fatalln(format string, a ...interface{}) {
-	logrus.Fatalln(format, a...)
+func Fatalln(args ...interface{}) {
+	logrus.Fatalln(args...)
 }
 
 // Fatal will log in Fail level and call exit program
@@ -299,13 +299,13 @@ func Fatal(message string) {
 }
 
 // Panicf will log in panic level with format and call panic
-func Panicf(message string, a ...interface{}) {
-	logrus.Panicf(message, a...)
+func Panicf(message string, args ...interface{}) {
+	logrus.Panicf(message, args...)
 }
 
 // Panicln will log in panic level with format and call panic
-func Panicln(message string, a ...interface{}) {
-	logrus.Panicln(message, a...)
+func Panicln(args ...interface{}) {
+	logrus.Panicln(args...)
 }
 
 // Panic will log in panic level and call panic
