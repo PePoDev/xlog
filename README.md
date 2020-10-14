@@ -20,8 +20,6 @@ import (
 )
 
 func main(){
-    xlog.DefaultLogFormatter()
-
     xlog.Trace("Trace")
     xlog.Debug("Debug")
     xlog.Info("Info")
@@ -42,8 +40,6 @@ import (
 )
 
 func main(){
-    xlog.DefaultLogFormatter()
-
     xlog.ConnectElasticsearch("http://localhost:9200", "username", "password", "host", "index", logrus.DebugLevel)
 
     xlog.Info("HI Elasticsearch from XLog <3")
@@ -60,7 +56,6 @@ import (
 )
 
 func main(){
-    xlog.DefaultLogFormatter()
     xlog.ConnectElasticsearch("http://localhost:9200", "username", "password", "host", "index", logrus.DebugLevel)
 
     log := xlog.NewLog()

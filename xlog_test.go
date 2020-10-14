@@ -9,6 +9,7 @@ import (
 
 func TestLog(t *testing.T) {
 	fmt.Println(t.Name())
+	xlog.Trace("Status is Trace")
 	xlog.Debug("Status is Debug")
 	xlog.Info("Status is Info")
 	xlog.Warn("Status is Warning")
@@ -18,6 +19,8 @@ func TestLog(t *testing.T) {
 
 func TestLogFormatting(t *testing.T) {
 	fmt.Println(t.Name())
+	xlog.Tracef("%s %s", "Status is", "Trace")
+	xlog.Debugf("%s %s", "Status is", "Debug")
 	xlog.Debugf("%s %s", "Status is", "Debug")
 	xlog.Infof("%s %s", "Status is", "Info")
 	xlog.Warnf("%s %s", "Status is", "Warning")
@@ -27,6 +30,7 @@ func TestLogFormatting(t *testing.T) {
 
 func TestLogLine(t *testing.T) {
 	fmt.Println(t.Name())
+	xlog.Traceln("Status is", "Trace")
 	xlog.Debugln("Status is", "Debug")
 	xlog.Infoln("Status is", "Info")
 	xlog.Warnln("Status is", "Warning")
@@ -45,6 +49,26 @@ func TestLogPanic(t *testing.T) {
 	fmt.Println()
 }
 
-func BenchmarkLogFormatting(*testing.B) {
-	xlog.Debugf("%s %d", "Number is ", 99)
+func BenchmarkLogFormatting(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		xlog.Infof("%s %d", "Number is", i)
+	}
+}
+
+func Example_log() {
+	xlog.Trace("Trace")
+	xlog.Debug("Debug")
+	xlog.Info("Info")
+	xlog.Warn("Warn")
+	xlog.Error("Error")
+	xlog.Panic("Panic")
+	xlog.Fatal("Fatal")
+	// Output:
+	// Trace
+	// Debug
+	// Info
+	// Warn
+	// Error
+	// Panic
+	// Fatal
 }
