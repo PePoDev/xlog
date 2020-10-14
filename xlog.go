@@ -31,7 +31,7 @@ func DefaultLogFormatter() {
 	}
 
 	logrus.SetFormatter(logFormat)
-	logrus.SetReportCaller(true)
+	logrus.SetReportCaller(false)
 
 	logrus.SetOutput(os.Stdout)
 	logrus.SetLevel(logrus.DebugLevel)
