@@ -2,4 +2,8 @@ module github.com/pepodev/xlog
 
 go 1.15
 
-require github.com/sirupsen/logrus v1.7.0
+require (
+	github.com/olivere/elastic/v7 v7.0.20
+	github.com/sirupsen/logrus v1.7.0
+	gopkg.in/sohlich/elogrus.v7 v7.0.0
+)
